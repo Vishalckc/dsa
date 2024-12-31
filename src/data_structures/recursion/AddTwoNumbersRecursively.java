@@ -1,4 +1,4 @@
-package data_structures.misc;
+package data_structures.recursion;
 
 public class AddTwoNumbersRecursively {
     public static void main(String[] args) {
