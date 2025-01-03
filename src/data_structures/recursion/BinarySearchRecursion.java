@@ -1,4 +1,4 @@
-package data_structures.misc;
+package data_structures.recursion;
 
 import java.util.stream.IntStream;
 
