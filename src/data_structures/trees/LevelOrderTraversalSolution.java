@@ -2,7 +2,6 @@ package data_structures.trees;
 
 import java.util.*;
 import java.util.concurrent.ArrayBlockingQueue;
-import java.util.stream.Stream;
 
 
 class TreeNode {
@@ -24,7 +23,7 @@ class TreeNode {
     }
 }
 
-class Solution {
+class LevelOrderTraversalSolution {
     public static void main(String[] args) {
         TreeNode a = new TreeNode(3);
         TreeNode b = new TreeNode(9);
