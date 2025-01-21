@@ -1,9 +1,9 @@
 package data_structures.misc;
 
-public class CheckBST {
+public class BSTVerifierProgram {
     public static void main(String[] args) {
-        CheckBST obj = new CheckBST();
-        int[] sortedArray = {3, 5, 7, 9, 11, 13, 15};
+        BSTVerifierProgram obj = new BSTVerifierProgram();
+        int[] sortedArray = {6, 5, 7, 9, 11, 13, 15};
 
         // Create a balanced binary tree
         Node root = createBinaryTree(sortedArray, 0, sortedArray.length - 1);
