@@ -11,6 +11,10 @@ import java.util.Stack;
  * A    9,9,9,9,9,9,9
  * B    9,9,9,9
  * R    8,9,9,9,0,0,0,1
+ * <p>
+ * A    [2,4,9]
+ * B    [5,6,4,9]
+ * R    [7,0,4,0,1]
  **/
 public class TwoSumIterative {
     public static void main(String[] args) {
@@ -27,11 +31,9 @@ public class TwoSumIterative {
         ln2 = getListNode(l2, temp, ln2);
 
         ListNode listNode = obj.addTwoNumbers(ln1, ln2);
-        while (listNode != null) {
-            System.out.print(listNode.val + " ");
-            listNode = listNode.next;
-        }
+        printList(listNode);
     }
+
 
     private static ListNode getListNode(List<Integer> l1, ListNode temp, ListNode ln1) {
         for (int i = 0; i < l1.size(); i++) {
@@ -90,8 +92,8 @@ public class TwoSumIterative {
             temp.next = new ListNode(sum);
             temp = temp.next;
         }
-        if(carry>0) {
-            temp.next=new ListNode(carry);
+        if (carry > 0) {
+            temp.next = new ListNode(carry);
         }
         return head;
     }
@@ -108,6 +110,13 @@ public class TwoSumIterative {
         ListNode(int val, ListNode next) {
             this.val = val;
             this.next = next;
+        }
+    }
+
+    private static void printList(ListNode listNode) {
+        while (listNode != null) {
+            System.out.print(listNode.val + " ");
+            listNode = listNode.next;
         }
     }
 }
