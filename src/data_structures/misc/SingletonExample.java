@@ -19,8 +19,6 @@ public class SingletonExample {
 
         if (se == null) {
             SingletonExample.se = new SingletonExample();
-           /* synchronized(this.c) {
-            }*/
         }
         return SingletonExample.se;
 

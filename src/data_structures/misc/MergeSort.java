@@ -3,19 +3,13 @@ import java.util.Arrays;
 
 public class MergeSort {
     public static void main(String[] args) {
-        int arr[] = {35, 0, 19, 86, 856, 75, 14, -1};
-        // 75, 856, -1, 14
-
+        //int arr[] = {35, 0, 19, 86, 856, 75, 14, -1};
+        int arr[] = {79, 68, 32, 41, 33, 29};
         mergeSort(arr, 0, arr.length);
         Arrays.stream(arr).mapToObj(Integer::toString).map(s-> s+" ").forEach(System.out::print);
     }
 
-    //recursively divide the array into sub arrays
     public static void mergeSort(int[] arr, int start, int end) {
-        for (int i = start; i < end; i++) {
-            System.out.print(arr[i]+ " ");
-        }
-        System.out.println();
         if (end - start < 2) {
             return;
         }
@@ -36,41 +30,6 @@ public class MergeSort {
         System.arraycopy(arr, i, arr, start+tempindex, mid-i);
         System.arraycopy(temp, 0, arr, start, tempindex);
         System.out.println("Printing merge");
-
-       /* int n1 = mid - start + 1; // Left subarray size
-        int n2 = end - mid;    // Right subarray size
-
-        int[] firstarr = new int[n1];
-        int[] secarr = new int[n2];
-        for (int i = 0; i < n1; i++) {
-            firstarr[i] = arr[start + i];
-        }
-        for (int i = 0; i < n2; i++) {
-            secarr[i] = arr[mid  + i];
-        }
-        int i = 0, j = 0, k = start; // Initial indexes
-        while (i < n1 && j < n2) {
-            if (firstarr[i] <= secarr[j]) {
-                arr[k] = firstarr[i];
-                i++;
-            } else {
-                arr[k] = secarr[j];
-                j++;
-            }
-            k++;
-            while (i < n1) {
-                arr[k] = firstarr[i];
-                i++;
-                k++;
-            }
-
-            // Copy remaining elements of rightArray, if any
-            while (j < n2) {
-                arr[k] = secarr[j];
-                j++;
-                k++;
-            }
-        }*/
 
     }
 }
